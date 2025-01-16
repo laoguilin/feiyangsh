@@ -35,32 +35,37 @@ allinone_ins() {
 #查询是否存在allinone容器，及容器所使用的镜像名
 existing_container=$(docker ps -a --filter "name=allinone" --format "{{.Names}}")
 image_name=$(docker inspect --format '{{.Config.Image}}' allinone 2>/dev/null)
-if [ -n "$existing_container" ]; then
-local tv
-local aesKey
-local userid
-local token
-    while true; do
-                read -p "allinone容器已存在，是否重新部署？(y/n): " all_id
-        case $all_id in
-            [yY])
-                docker stop allinone
-                docker rm allinone
-                docker rmi $image_name
-                break
-                ;;
-            [nN])
-                echo "你选择不重新部署,返回菜单。"
-                break
-                ;;
-            *)
-                echo "输入有误，请输入y或n 。"
-                ;;
-        esac
-    done
-else
-        echo "没有检测到allinone容器，继续进行部署。"
+	if [ -n "$existing_container" ]; then
+	local tv
+	local aesKey
+	local userid
+	local token
+		while true; do
+					read -p "allinone容器已存在，是否重新部署？(y/n): " all_id
+			case $all_id in
+				[yY])
+					docker rm -f allinone
+					docker rmi $image_name
+					echo "已成功删除旧容器和镜像。"
+					tv_true
+					break
+					;;
+				[nN])
+					echo "你选择不重新部署,返回菜单。"
+					break
+					;;
+				*)
+					echo "输入有误，请输入y或n 。"
+					;;
+			esac
+		done
+	else
+			echo "没有检测到allinone容器，继续进行部署。"
+			tv_true
+	fi	
+}
     # 获取 -tv 参数
+tv_true(){
     while true; do
         read -p "请选择是否开启直播（输入 y 或 n）：" tv_input
         case $tv_input in
@@ -87,7 +92,6 @@ else
             echo "输入有误，请输入正确的aesKey。"
         fi
     done
-
     # 获取 -userid 参数
     while true; do
         read -p "请输入你的userid ：" userid
@@ -107,6 +111,10 @@ else
             echo "输入有误，请输入正确的token。"
         fi
     done
+	net_host
+}
+#获取网络模式
+net_host(){
     global_tv=$tv
     global_aesKey=$aesKey
     global_userid=$userid
@@ -128,6 +136,10 @@ else
                 ;;
         esac
     done
+	addr_ip
+}
+#获取ip并输出
+addr_ip(){
         while true; do
         local_ip=$(ip -4 addr show scope global | grep -oP 'inet \K[\d.]+' | head -n 1)
         log_output=$(docker logs $container_id 2>/dev/null)
@@ -136,9 +148,8 @@ else
                 else
                         echo "容器启动失败，请检查各项参数后重新运行本脚本。"
                 fi
-                exit 0
+                break
         done
-fi
 }
 
 #安装allinone_format容器
@@ -245,7 +256,7 @@ format_net(){
     format_url
 }
         #检查容器是否启动成功，并输出访问路径
-        format_url(){
+    format_url(){
         while true; do
             local_ip=$(ip -4 addr show scope global | grep -oP 'inet \K[\d.]+' | head -n 1)
             log_output=$(docker inspect --format '{{.State.Running }}' allinone_format)
@@ -256,7 +267,7 @@ format_net(){
             fi
             break
         done
-                }
+    }
 
 
 #卸载肥羊allinone
