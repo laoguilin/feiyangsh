@@ -20,9 +20,9 @@ http://cdn3.163189.xyz/live/cwjd/stream.m3u8
 http://cdn3.163189.xyz/live/fhzx/stream.m3u8
 #EXTINF:-1 group-title="海外",TVB J1
 http://cdn3.163189.xyz/live/j1/stream.m3u8
-#EXTINF:-1 group-title="海外",广东珠江
+#EXTINF:-1 group-title="卫视",广东珠江
 http://cdn2.163189.xyz/live/gdzj/stream.m3u8
-#EXTINF:-1 group-title="海外",广东体育
+#EXTINF:-1 group-title="卫视",广东体育
 http://cdn2.163189.xyz/live/gdty/stream.m3u8
 #EXTINF:-1 tvg-name="翡翠台" group-title="海外",翡翠台4K
 http://服务器ip:20000/live/fct4k/stream.m3u8
@@ -146,9 +146,9 @@ http://服务器ip:20005/hls/live/35.m3u8?token=你的token
 http://服务器ip:20005/hls/live/500.m3u8?token=你的token
 #EXTINF:-1 tvg-name="天映马来西亚" group-title="海外",CM
 http://服务器ip:20005/hls/live/501.m3u8?token=你的token
-#EXTINF:-1 tvg-name="广东珠江" group-title="海外",珠江
+#EXTINF:-1 tvg-name="广东珠江" group-title="卫视",珠江
 http://服务器ip:20005/hls/live/502.m3u8?token=你的token
-#EXTINF:-1 group-title="海外",广东体育
+#EXTINF:-1 group-title="卫视",广东体育
 http://服务器ip:20005/hls/live/503.m3u8?token=你的token
 #EXTINF:-1 group-title="海外",SuperSport LaLiga
 http://服务器ip:20005/hls/live/700.m3u8?token=你的token
@@ -387,11 +387,11 @@ http://111.31.106.140/downflv.brtvcloud.com/8klive/8kliveok.m3u8
 http://肥羊IP:35455/gaoma/cctv8k_36m.m3u8
 #EXTINF:-1,tvg-id="cctv8k" tvg-name="cctv8k" tvg-logo="https://epg.v1.mk/logo/cctv8k.png" group-title="超高清",cctv8k_120m
 http://肥羊IP:35455/gaoma/cctv8k_120m.m3u8
-#EXTINF:-1,tvg-id="北京纪实科教" tvg-name="北京纪实科教" tvg-logo="https://epg.v1.mk/logo/北京纪实科教.png" group-title="北京",北京纪实科教
+#EXTINF:-1,tvg-id="北京纪实科教" tvg-name="北京纪实科教" tvg-logo="https://epg.v1.mk/logo/北京纪实科教.png" group-title="卫视",北京纪实科教
 http://肥羊IP:35455/itv/1000000001000001910.m3u8?cdn=ystenlive
-#EXTINF:-1,tvg-id="北京纪实科教" tvg-name="北京纪实科教" tvg-logo="https://epg.v1.mk/logo/北京纪实科教.png" group-title="北京",北京纪实科教-HEVC
+#EXTINF:-1,tvg-id="北京纪实科教" tvg-name="北京纪实科教" tvg-logo="https://epg.v1.mk/logo/北京纪实科教.png" group-title="卫视",北京纪实科教-HEVC
 http://肥羊IP:35455/itv/1000000005000265020.m3u8?cdn=ystenlive
-#EXTINF:-1,tvg-id="北京卡酷少儿" tvg-name="北京卡酷少儿" tvg-logo="https://epg.v1.mk/logo/北京卡酷少儿.png" group-title="北京",北京卡酷少儿
+#EXTINF:-1,tvg-id="北京卡酷少儿" tvg-name="北京卡酷少儿" tvg-logo="https://epg.v1.mk/logo/北京卡酷少儿.png" group-title="卫视",北京卡酷少儿
 http://肥羊IP:35455/itv/7851974109718180595.m3u8?cdn=bestzb
 #EXTINF:-1,tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://epg.v1.mk/logo/安徽卫视.png" group-title="卫视",安徽卫视
 http://肥羊IP:35455/itv/1000000001000030159.m3u8?cdn=ystenlive
