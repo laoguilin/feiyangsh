@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://gh-proxy.com/https://raw.githubusercontent.com/fanmingming/live/main/e.xml"
+#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml"
 
 #EXTINF:-1 group-title="央视",需软件支持
 webview://https://tv.cctv.com/live/cctv1/
