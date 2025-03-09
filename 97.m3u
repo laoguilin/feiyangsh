@@ -1,4 +1,3 @@
-
 #EXTM3U x-tvg-url="https://epg.v1.mk/fy.xml"
 #EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/CCTV1.png" group-title="央视频道",cctv1-高码
 http://192.168.1.97:35455/gaoma/cctv1.m3u8
